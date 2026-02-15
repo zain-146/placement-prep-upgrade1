@@ -1,0 +1,271 @@
+/* ============================================
+   KODNEST PREMIUM BUILD SYSTEM
+   Layout System v1.0
+   ============================================ */
+
+/* ----------------------------------------
+   GLOBAL PAGE STRUCTURE
+   [Top Bar] → [Context Header] → [Primary + Secondary] → [Proof Footer]
+   ---------------------------------------- */
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----------------------------------------
+   TOP BAR
+   Left: Project name | Center: Progress | Right: Status badge
+   ---------------------------------------- */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 var(--space-3);
+  background-color: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.top-bar__project {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary-text);
+  letter-spacing: var(--tracking-wide);
+}
+
+.top-bar__progress {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-secondary-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.top-bar__progress-step {
+  font-weight: var(--font-medium);
+  color: var(--color-primary-text);
+}
+
+/* ----------------------------------------
+   STATUS BADGE
+   ---------------------------------------- */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  border-radius: var(--radius-full);
+  border: var(--border-width) solid transparent;
+}
+
+.status-badge--not-started {
+  background-color: var(--color-background);
+  border-color: var(--color-border);
+  color: var(--color-tertiary-text);
+}
+
+.status-badge--in-progress {
+  background-color: var(--color-warning-subtle);
+  border-color: transparent;
+  color: var(--color-warning);
+}
+
+.status-badge--shipped {
+  background-color: var(--color-success-subtle);
+  border-color: transparent;
+  color: var(--color-success);
+}
+
+.status-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: currentColor;
+}
+
+/* ----------------------------------------
+   CONTEXT HEADER
+   Large serif headline, 1-line subtext
+   ---------------------------------------- */
+
+.context-header {
+  padding: var(--space-4) var(--space-3);
+  background-color: var(--color-surface);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.context-header__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.context-header__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary-text);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-1);
+}
+
+.context-header__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-secondary-text);
+  line-height: var(--leading-relaxed);
+  max-width: var(--max-prose);
+}
+
+/* ----------------------------------------
+   MAIN CONTENT AREA
+   Primary Workspace (70%) + Secondary Panel (30%)
+   ---------------------------------------- */
+
+.main-content {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-3);
+  gap: var(--space-3);
+}
+
+/* Primary Workspace - 70% */
+.primary-workspace {
+  flex: 7;
+  min-width: 0;
+}
+
+/* Secondary Panel - 30% */
+.secondary-panel {
+  flex: 3;
+  min-width: 280px;
+  max-width: 380px;
+}
+
+.secondary-panel__section {
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.secondary-panel__title {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary-text);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  margin-bottom: var(--space-2);
+}
+
+.secondary-panel__text {
+  font-size: var(--text-sm);
+  color: var(--color-secondary-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+}
+
+/* ----------------------------------------
+   PROOF FOOTER
+   Checklist: □ UI Built □ Logic Working □ Test Passed □ Deployed
+   ---------------------------------------- */
+
+.proof-footer {
+  background-color: var(--color-surface);
+  border-top: var(--border-width) solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  position: sticky;
+  bottom: 0;
+  z-index: var(--z-sticky);
+}
+
+.proof-footer__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.proof-footer__checklist {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.proof-footer__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-secondary-text);
+}
+
+.proof-footer__item--complete {
+  color: var(--color-success);
+}
+
+.proof-footer__checkbox {
+  width: 18px;
+  height: 18px;
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface);
+  transition: all var(--transition-fast);
+}
+
+.proof-footer__item--complete .proof-footer__checkbox {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
+
+/* ----------------------------------------
+   RESPONSIVE
+   ---------------------------------------- */
+
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .secondary-panel {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .context-header__title {
+    font-size: var(--text-3xl);
+  }
+  
+  .proof-footer__checklist {
+    gap: var(--space-2);
+  }
+  
+  .top-bar {
+    padding: 0 var(--space-2);
+  }
+}

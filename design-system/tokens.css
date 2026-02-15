@@ -1,0 +1,128 @@
+/* ============================================
+   KODNEST PREMIUM BUILD SYSTEM
+   Design Tokens v1.0
+   ============================================ */
+
+:root {
+  /* ----------------------------------------
+     COLOR SYSTEM (Maximum 4 colors)
+     ---------------------------------------- */
+  
+  /* Core Palette */
+  --color-background: #F7F6F3;
+  --color-surface: #FFFFFF;
+  --color-primary-text: #111111;
+  --color-secondary-text: #5C5C5C;
+  --color-tertiary-text: #8A8A8A;
+  
+  /* Accent */
+  --color-accent: #8B0000;
+  --color-accent-hover: #6B0000;
+  --color-accent-subtle: rgba(139, 0, 0, 0.08);
+  
+  /* Semantic */
+  --color-success: #3D6B4F;
+  --color-success-subtle: rgba(61, 107, 79, 0.1);
+  --color-warning: #9A7B2C;
+  --color-warning-subtle: rgba(154, 123, 44, 0.1);
+  --color-error: #8B0000;
+  --color-error-subtle: rgba(139, 0, 0, 0.08);
+  
+  /* Borders */
+  --color-border: #E5E4E1;
+  --color-border-strong: #D1D0CD;
+  
+  /* ----------------------------------------
+     TYPOGRAPHY
+     ---------------------------------------- */
+  
+  /* Font Families */
+  --font-heading: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 2rem;      /* 32px */
+  --text-4xl: 2.5rem;    /* 40px */
+  --text-5xl: 3rem;      /* 48px */
+  
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+  --leading-loose: 1.8;
+  
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.04em;
+  
+  /* Max Width for Readability */
+  --max-prose: 720px;
+  
+  /* ----------------------------------------
+     SPACING SYSTEM (8px base)
+     ---------------------------------------- */
+  
+  --space-1: 0.5rem;     /* 8px */
+  --space-2: 1rem;       /* 16px */
+  --space-3: 1.5rem;     /* 24px */
+  --space-4: 2.5rem;     /* 40px */
+  --space-5: 4rem;       /* 64px */
+  
+  /* Aliases for semantic usage */
+  --space-xs: var(--space-1);
+  --space-sm: var(--space-2);
+  --space-md: var(--space-3);
+  --space-lg: var(--space-4);
+  --space-xl: var(--space-5);
+  
+  /* ----------------------------------------
+     BORDERS & RADIUS
+     ---------------------------------------- */
+  
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+  
+  --border-width: 1px;
+  --border-width-strong: 2px;
+  
+  /* ----------------------------------------
+     TRANSITIONS
+     ---------------------------------------- */
+  
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 200ms ease-in-out;
+  
+  /* ----------------------------------------
+     SHADOWS (minimal)
+     ---------------------------------------- */
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.06);
+  
+  /* ----------------------------------------
+     Z-INDEX SCALE
+     ---------------------------------------- */
+  
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}

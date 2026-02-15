@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KodNest Premium Build System — Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="components.css">
+  <style>
+    .reference-section {
+      padding: var(--space-4) var(--space-3);
+      border-bottom: var(--border-width) solid var(--color-border);
+    }
+    .reference-section:last-child {
+      border-bottom: none;
+    }
+    .reference-section__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-3);
+    }
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-2);
+    }
+    .color-swatch {
+      padding: var(--space-3);
+      border-radius: var(--radius-md);
+      border: var(--border-width) solid var(--color-border);
+    }
+    .color-swatch__name {
+      font-size: var(--text-sm);
+      font-weight: var(--font-medium);
+      margin-top: var(--space-1);
+    }
+    .color-swatch__value {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-tertiary-text);
+    }
+    .spacing-demo {
+      display: flex;
+      align-items: flex-end;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+    }
+    .spacing-block {
+      background-color: var(--color-accent-subtle);
+      border: var(--border-width) solid var(--color-accent);
+    }
+    .demo-row {
+      display: flex;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: var(--space-2);
+    }
+  </style>
+</head>
+<body>
+  <!-- ============================================
+       FULL PAGE LAYOUT DEMO
+       ============================================ -->
+  
+  <div class="app-layout">
+    
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <div class="top-bar__project">KodNest Premium</div>
+      <div class="top-bar__progress">
+        Step <span class="top-bar__progress-step">3</span> / 7
+      </div>
+      <div class="status-badge status-badge--in-progress">
+        <span class="status-badge__dot"></span>
+        In Progress
+      </div>
+    </header>
+
+    <!-- CONTEXT HEADER -->
+    <section class="context-header">
+      <div class="context-header__inner">
+        <h1 class="context-header__title">Design System Reference</h1>
+        <p class="context-header__subtitle">
+          Complete documentation of all tokens, components, and patterns in the KodNest Premium Build System.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main style="flex: 1; max-width: 1400px; margin: 0 auto; width: 100%;">
+
+      <!-- COLOR SYSTEM -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Color System</h2>
+        <div class="reference-grid">
+          <div class="color-swatch" style="background-color: #F7F6F3;">
+            <div class="color-swatch__name">Background</div>
+            <div class="color-swatch__value">#F7F6F3</div>
+          </div>
+          <div class="color-swatch" style="background-color: #FFFFFF;">
+            <div class="color-swatch__name">Surface</div>
+            <div class="color-swatch__value">#FFFFFF</div>
+          </div>
+          <div class="color-swatch" style="background-color: #111111; color: white;">
+            <div class="color-swatch__name" style="color: white;">Primary Text</div>
+            <div class="color-swatch__value" style="color: rgba(255,255,255,0.7);">#111111</div>
+          </div>
+          <div class="color-swatch" style="background-color: #8B0000; color: white;">
+            <div class="color-swatch__name" style="color: white;">Accent</div>
+            <div class="color-swatch__value" style="color: rgba(255,255,255,0.7);">#8B0000</div>
+          </div>
+          <div class="color-swatch" style="background-color: #3D6B4F; color: white;">
+            <div class="color-swatch__name" style="color: white;">Success</div>
+            <div class="color-swatch__value" style="color: rgba(255,255,255,0.7);">#3D6B4F</div>
+          </div>
+          <div class="color-swatch" style="background-color: #9A7B2C; color: white;">
+            <div class="color-swatch__name" style="color: white;">Warning</div>
+            <div class="color-swatch__value" style="color: rgba(255,255,255,0.7);">#9A7B2C</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Typography</h2>
+        <div style="margin-bottom: var(--space-3);">
+          <h1>Heading 1 — Playfair Display</h1>
+          <h2>Heading 2 — Confident & Generous</h2>
+          <h3>Heading 3 — Clear Hierarchy</h3>
+          <h4>Heading 4 — Balanced Weight</h4>
+        </div>
+        <p class="text-lg">Large body text for important paragraphs. Line height 1.8 for comfortable reading.</p>
+        <p>Standard body text at 16px. Clean sans-serif with relaxed line height. Maximum width constrained to 720px for optimal readability across all screen sizes.</p>
+        <p class="text-sm text-secondary">Small secondary text for captions and metadata.</p>
+        <p><code>Inline code styling</code> for technical references.</p>
+      </section>
+
+      <!-- SPACING -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Spacing Scale</h2>
+        <div class="spacing-demo">
+          <div>
+            <div class="spacing-block" style="width: 8px; height: 8px;"></div>
+            <p class="text-xs text-secondary" style="margin-top: 4px;">8px</p>
+          </div>
+          <div>
+            <div class="spacing-block" style="width: 16px; height: 16px;"></div>
+            <p class="text-xs text-secondary" style="margin-top: 4px;">16px</p>
+          </div>
+          <div>
+            <div class="spacing-block" style="width: 24px; height: 24px;"></div>
+            <p class="text-xs text-secondary" style="margin-top: 4px;">24px</p>
+          </div>
+          <div>
+            <div class="spacing-block" style="width: 40px; height: 40px;"></div>
+            <p class="text-xs text-secondary" style="margin-top: 4px;">40px</p>
+          </div>
+          <div>
+            <div class="spacing-block" style="width: 64px; height: 64px;"></div>
+            <p class="text-xs text-secondary" style="margin-top: 4px;">64px</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Buttons</h2>
+        <div class="demo-row">
+          <button class="btn btn--primary">Primary Action</button>
+          <button class="btn btn--secondary">Secondary</button>
+          <button class="btn btn--ghost">Ghost</button>
+          <button class="btn btn--success">Success</button>
+          <button class="btn btn--danger">Danger</button>
+        </div>
+        <div class="demo-row">
+          <button class="btn btn--primary btn--sm">Small</button>
+          <button class="btn btn--primary">Default</button>
+          <button class="btn btn--primary btn--lg">Large</button>
+        </div>
+        <div class="demo-row">
+          <button class="btn btn--primary" disabled>Disabled</button>
+          <button class="btn btn--secondary" disabled>Disabled</button>
+        </div>
+      </section>
+
+      <!-- INPUTS -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Form Controls</h2>
+        <div style="max-width: 400px;">
+          <div class="form-group">
+            <label class="label">Email Address</label>
+            <input type="email" class="input" placeholder="you@example.com">
+            <p class="help-text">We'll never share your email.</p>
+          </div>
+          <div class="form-group">
+            <label class="label">Project Description</label>
+            <textarea class="textarea" placeholder="Describe your project..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="label">Category</label>
+            <select class="select">
+              <option>Select a category</option>
+              <option>Web Application</option>
+              <option>Mobile App</option>
+              <option>API Service</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="label">With Error</label>
+            <input type="text" class="input input--error" value="Invalid input">
+            <p class="help-text help-text--error">Please enter a valid value.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Cards</h2>
+        <div class="reference-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+          <div class="card">
+            <div class="card__header">
+              <div>
+                <div class="card__title">Standard Card</div>
+                <div class="card__subtitle">Subtitle or metadata</div>
+              </div>
+              <span class="badge">Default</span>
+            </div>
+            <div class="card__content">
+              Card content with balanced padding and subtle borders. No drop shadows.
+            </div>
+          </div>
+          <div class="card card--interactive">
+            <div class="card__header">
+              <div>
+                <div class="card__title">Interactive Card</div>
+                <div class="card__subtitle">Hover to see effect</div>
+              </div>
+            </div>
+            <div class="card__content">
+              Cursor changes and border darkens on hover.
+            </div>
+          </div>
+          <div class="card card--selected">
+            <div class="card__header">
+              <div>
+                <div class="card__title">Selected Card</div>
+                <div class="card__subtitle">Active state</div>
+              </div>
+              <span class="badge badge--accent">Selected</span>
+            </div>
+            <div class="card__content">
+              Accent border and subtle background tint.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATUS BADGES -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Status Badges</h2>
+        <div class="demo-row">
+          <div class="status-badge status-badge--not-started">
+            <span class="status-badge__dot"></span>
+            Not Started
+          </div>
+          <div class="status-badge status-badge--in-progress">
+            <span class="status-badge__dot"></span>
+            In Progress
+          </div>
+          <div class="status-badge status-badge--shipped">
+            <span class="status-badge__dot"></span>
+            Shipped
+          </div>
+        </div>
+        <div class="demo-row" style="margin-top: var(--space-2);">
+          <span class="badge">Default</span>
+          <span class="badge badge--accent">Accent</span>
+          <span class="badge badge--success">Success</span>
+          <span class="badge badge--warning">Warning</span>
+        </div>
+      </section>
+
+      <!-- PROMPT BOX -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Prompt Box</h2>
+        <div style="max-width: 500px;">
+          <div class="prompt-box">
+            <div class="prompt-box__header">
+              <span class="prompt-box__label">Prompt</span>
+              <button class="btn btn--ghost btn--sm">Copy</button>
+            </div>
+            <div class="prompt-box__content">
+Create a REST API with the following endpoints:
+- GET /users
+- POST /users
+- GET /users/:id
+- PUT /users/:id
+- DELETE /users/:id
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MESSAGES -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Messages</h2>
+        <div style="max-width: 500px; display: flex; flex-direction: column; gap: var(--space-2);">
+          <div class="error-message">
+            <div class="error-message__title">Build Failed</div>
+            <div class="error-message__text">
+              The deployment could not be completed due to a missing environment variable.
+            </div>
+            <div class="error-message__action">
+              → Add NEXT_PUBLIC_API_URL to your environment
+            </div>
+          </div>
+          <div class="success-message">
+            <div class="success-message__title">Deployment Complete</div>
+            <div class="success-message__text">
+              Your application is now live at production.example.com
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMPTY STATE -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Empty State</h2>
+        <div class="card">
+          <div class="empty-state">
+            <svg class="empty-state__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <div class="empty-state__title">No projects yet</div>
+            <div class="empty-state__text">
+              Create your first project to get started with the build system.
+            </div>
+            <button class="btn btn--primary">Create Project</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHECKBOXES -->
+      <section class="reference-section">
+        <h2 class="reference-section__title">Checkboxes & Radios</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--space-2);">
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox__input">
+            <span>Unchecked checkbox</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox__input" checked>
+            <span>Checked checkbox</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="demo" class="radio__input">
+            <span>Radio option one</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="demo" class="radio__input" checked>
+            <span>Radio option two (selected)</span>
+          </label>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- PROOF FOOTER -->
+    <footer class="proof-footer">
+      <div class="proof-footer__inner">
+        <div class="proof-footer__checklist">
+          <div class="proof-footer__item proof-footer__item--complete">
+            <div class="proof-footer__checkbox">
+              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span>UI Built</span>
+          </div>
+          <div class="proof-footer__item proof-footer__item--complete">
+            <div class="proof-footer__checkbox">
+              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span>Logic Working</span>
+          </div>
+          <div class="proof-footer__item">
+            <div class="proof-footer__checkbox"></div>
+            <span>Test Passed</span>
+          </div>
+          <div class="proof-footer__item">
+            <div class="proof-footer__checkbox"></div>
+            <span>Deployed</span>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--sm">Submit Proof</button>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
